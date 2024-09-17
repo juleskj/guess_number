@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Guess a number between 0-100!</h1>
+    <input type="number" id="guessBox" placeholder="Guess number">
+    <button onclick="guessNumber()">Guess</button>
+
+    <p id="result"></p>
+</body>
+<script src="index.js"></script>
+<script src="conffeti.js"></script>
+
+</html>
+
+<style>
+    /* .linear {
+        background-image: linear-gradient(90deg, #e06363 0%, #e0ba63 20%, #95e063 40%, #63ace0 60%, #9163e0 80%, #e06384 100%);
+    } */
+
+    input,
+    button {
+        padding: 10px;
+        border-radius: 50px;
+        border: none;
+        outline: gray;
+        background-color: rgb(236, 236, 236);
+        width: fit-content;
+
+    }
+
+    button {
+        background-color: gray;
+        padding-inline: 30px;
+        color: white;
+    }
+
+    p {
+        padding-inline: 20px;
+        background-color: rgb(236, 236, 236);
+        color: rgb(21, 21, 21);
+        width: fit-content;
+        border-radius: 50px;
+    }
+
+
+
+    .linear {
+        background-image: linear-gradient(-45deg, #e06363, #e0ba63, #95e063, #63ace0, #9163e0, #e06384);
+        background-size: 400% 400%;
+        height: 100vh;
+        animation: gradient_kf 15s ease infinite;
+
+
+    }
+
+
+    @keyframes gradient_kf {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
