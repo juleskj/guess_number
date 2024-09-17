@@ -1,5 +1,5 @@
 let max = 100;
-let rand = Math.round(Math.random() * 100);
+let rand = Math.round(Math.random() * max);
 // const button = document.querySelector("#submitButton");
 // console.log(rand);
 function guessNumber() {
