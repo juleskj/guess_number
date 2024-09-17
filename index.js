@@ -8,7 +8,7 @@ function guessNumber() {
   //den bliver lavet om til et nummer
   const number = parseFloat(inputNumber);
 
-  if (number == rand) {
+  if (number === rand) {
     document.getElementById("result").textContent =
       "Yay you have guessed the number!";
     document.querySelector("body").classList.add("linear");
