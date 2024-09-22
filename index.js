@@ -1,7 +1,11 @@
+import { $, $$ } from "../utils/dom.js";
+import { getRandomNumber } from "../utils/numbers.js";
+
 let max = 100;
-let rand = Math.round(Math.random() * max);
-// const button = document.querySelector("#submitButton");
-// console.log(rand);
+let rand = getRandomNumber(max);
+
+$("button").addEventListener("click", guessNumber);
+
 function guessNumber() {
   const inputNumber = document.getElementById("guessBox").value;
   // her henter jeg valuen fra inputfæltet from en stirng og
@@ -9,13 +13,12 @@ function guessNumber() {
   const number = parseFloat(inputNumber);
 
   if (number === rand) {
-    document.getElementById("result").textContent =
-      "Yay you have guessed the number!";
-    document.querySelector("body").classList.add("linear");
+    $(".result").textContent = "Yay you have guessed the number!";
+    $("body").classList.add("linear");
   } else if (number < rand) {
-    document.getElementById("result").textContent = "higer!";
-  } else if (number > rand) {
-    document.getElementById("result").textContent = "Lower!";
+    $(".result").textContent = "higer!";
+  } else {
+    $(".result").textContent = "Lower!";
   }
 
   console.log(number);
